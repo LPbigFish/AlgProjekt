@@ -1,0 +1,60 @@
+\doxysection{Dokumentace souboru C\+:/\+Users/stegn/source/repos/\+Alg\+Projekt/\+Alg\+Projekt/\+Merge.h}
+\hypertarget{_merge_8h}{}\label{_merge_8h}\index{C:/Users/stegn/source/repos/AlgProjekt/AlgProjekt/Merge.h@{C:/Users/stegn/source/repos/AlgProjekt/AlgProjekt/Merge.h}}
+
+
+Definice funkce pro slévání k seřazených polí čísel do jednoho seřazeného pole.  
+
+
+{\ttfamily \#include $<$cstdarg$>$}\newline
+\doxysubsubsection*{Funkce}
+\begin{DoxyCompactItemize}
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_merge_8h_a1327b51824628c45225a917ce8f91cee}{merge}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arrays, int \texorpdfstring{$\ast$}{*}sizes, int k)
+\item 
+int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_merge_8h_ac6c0437304ec61fb12ac35621712bf01}{merge\+\_\+va}} (const int k,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailní popis}
+Definice funkce pro slévání k seřazených polí čísel do jednoho seřazeného pole. 
+
+\begin{DoxyAuthor}{Autor}
+Filip Štegner 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Dokumentace funkcí}
+\Hypertarget{_merge_8h_a1327b51824628c45225a917ce8f91cee}\index{Merge.h@{Merge.h}!merge@{merge}}
+\index{merge@{merge}!Merge.h@{Merge.h}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily \label{_merge_8h_a1327b51824628c45225a917ce8f91cee} 
+int \texorpdfstring{$\ast$}{*} merge (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{arrays}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{sizes}{, }\item[{const int}]{k}{}\end{DoxyParamCaption})}
+
+Slévá k seřazených polí čísel do jednoho seřazeného pole. 
+\begin{DoxyParams}{Parametry}
+{\em arrays} & Pole seřazených polí. \\
+\hline
+{\em sizes} & Pole velikostí jednotlivých polí. \\
+\hline
+{\em k} & Počet polí. k \texorpdfstring{$>$}{>}= 2 \&\& k \texorpdfstring{$<$}{<}= 100 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Seřazené pole čísel. 
+\end{DoxyReturn}
+\Hypertarget{_merge_8h_ac6c0437304ec61fb12ac35621712bf01}\index{Merge.h@{Merge.h}!merge\_va@{merge\_va}}
+\index{merge\_va@{merge\_va}!Merge.h@{Merge.h}}
+\doxysubsubsection{\texorpdfstring{merge\_va()}{merge\_va()}}
+{\footnotesize\ttfamily \label{_merge_8h_ac6c0437304ec61fb12ac35621712bf01} 
+int \texorpdfstring{$\ast$}{*} merge\+\_\+va (\begin{DoxyParamCaption}\item[{const int}]{k}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Slévá k seřazených polí čísel do jednoho seřazeného pole. (Testovací funkce) 
+\begin{DoxyParams}{Parametry}
+{\em k} & Počet polí. k \texorpdfstring{$>$}{>}= 2 \&\& k \texorpdfstring{$<$}{<}= 100 \\
+\hline
+{\em ...} & zapsané pole ve formátu "{}$<$pole$>$, $<$počet prvků v poli$>$, $<$pole$>$, $<$počet prvků v poli$>$, ..."{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Seřazené pole čísel. 
+\end{DoxyReturn}
