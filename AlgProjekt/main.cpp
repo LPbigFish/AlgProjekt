@@ -37,8 +37,8 @@ int main(int argc, char** argv) {
 				break;
 			}
 
-			if (entry.is_regular_file()) {
-				cout << "Found file: " << entry.path() << endl;
+			if (!entry.is_regular_file()) {
+				continue;
 			}
 
 			ifstream file(entry.path());
