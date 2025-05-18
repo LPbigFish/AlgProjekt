@@ -110,16 +110,17 @@ $(function(){initNavTree('_merge_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdarg&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  Algoritmus jsem vymyslel sám.</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">int</span>* <a class="code hl_function" href="_merge_8h.html#a1327b51824628c45225a917ce8f91cee">merge</a>(<span class="keywordtype">int</span>** arrays, <span class="keywordtype">int</span>* sizes, <span class="keywordtype">int</span> k);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// V této funkci se používá variadic arguments (va_list) pro předání proměnného počtu argumentů.</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// Zdroj: https://en.cppreference.com/w/cpp/utility/variadic</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// Tuto funkci jsem použil pro testování.</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">int</span>* <a class="code hl_function" href="_merge_8h.html#ac6c0437304ec61fb12ac35621712bf01">merge_va</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> k, ...);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//  Algoritmus jsem vymyslel sám skrz logické bádání.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//  Časovou složitost jsem vypočítal N * k ve všech případech. Ale protože k není nikdy vyšší jak 100, dá se říct, že se jedná o lineární algoritmus O ( N ).</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">int</span>* <a class="code hl_function" href="_merge_8h.html#a1327b51824628c45225a917ce8f91cee">merge</a>(<span class="keywordtype">int</span>** arrays, <span class="keywordtype">int</span>* sizes, <span class="keywordtype">int</span> k);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// V této funkci se používá variadic arguments (va_list) pro předání proměnného počtu argumentů.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// Zdroj: https://en.cppreference.com/w/cpp/utility/variadic</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// Tuto funkci jsem použil pro testování.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">int</span>* <a class="code hl_function" href="_merge_8h.html#ac6c0437304ec61fb12ac35621712bf01">merge_va</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> k, ...);</div>
 <div class="ttc" id="a_merge_8h_html_a1327b51824628c45225a917ce8f91cee"><div class="ttname"><a href="_merge_8h.html#a1327b51824628c45225a917ce8f91cee">merge</a></div><div class="ttdeci">int * merge(int **arrays, int *sizes, int k)</div><div class="ttdef"><b>Definition</b> merge.cpp:20</div></div>
-<div class="ttc" id="a_merge_8h_html_ac6c0437304ec61fb12ac35621712bf01"><div class="ttname"><a href="_merge_8h.html#ac6c0437304ec61fb12ac35621712bf01">merge_va</a></div><div class="ttdeci">int * merge_va(const int k,...)</div><div class="ttdef"><b>Definition</b> merge.cpp:60</div></div>
+<div class="ttc" id="a_merge_8h_html_ac6c0437304ec61fb12ac35621712bf01"><div class="ttname"><a href="_merge_8h.html#ac6c0437304ec61fb12ac35621712bf01">merge_va</a></div><div class="ttdeci">int * merge_va(const int k,...)</div><div class="ttdef"><b>Definition</b> merge.cpp:65</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

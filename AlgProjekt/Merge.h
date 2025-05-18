@@ -7,7 +7,8 @@
 #include <cstdarg>
 
 //
-//	Algoritmus jsem vymyslel sám.
+//	Algoritmus jsem vymyslel sám skrz logické bádání.
+//	Časovou složitost jsem vypočítal N * k ve všech případech. Ale protože k není nikdy vyšší jak 100, dá se říct, že se jedná o lineární algoritmus O ( N ).
 //
 /**
  * Slévá k seřazených polí čísel do jednoho seřazeného pole.

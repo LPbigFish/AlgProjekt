@@ -52,6 +52,7 @@ int main(int argc, char** argv) {
 			vector<int> numbers;
 			string line;
 			int number = 0;
+			cout << "Reading file: " << entry.path() << endl;
 			while (getline(file, line)) {
 				number = stoi(line);
 				numbers.push_back(number);
@@ -70,6 +71,8 @@ int main(int argc, char** argv) {
 		cerr << "Error: " << e.what() << endl;
 		return 1;
 	}
+
+	cout << endl << "Running the algorithm on " << k << " arrays." << endl;
 
 	// Slít
 	int* merged = merge(arrays, sizes, k);
