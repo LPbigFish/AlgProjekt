@@ -1,7 +1,7 @@
 /**
  * @file merge.cpp
  * @author Filip Štegner
- * @brief Slévá k seřazených polí čísel do jednoho seřazeného pole.
+ * @brief Implementace funkce pro slévání k seřazených polí čísel do jednoho seřazeného pole.
  */
 
 
@@ -19,16 +19,17 @@
 */
 int* merge(int** arrays, int* sizes, const int k)
 {
-	int sum_of_lengths = 0;
-
+	int sum_of_sizes = 0;
 	for (int i = 0; i < k; i++) {
-		sum_of_lengths += sizes[i];
+		sum_of_sizes += sizes[i];
 	}
 
 	int* ptrs = new int[k] {0};
-	int* result = new int[sum_of_lengths];
+	int* result = new int[sum_of_sizes];
 
-	for (int result_pointer = 0; result_pointer < sum_of_lengths; result_pointer++) {
+	// 0..sum_of_sizes - 1
+	for (int result_pointer = 0; result_pointer < sum_of_sizes; result_pointer++) {
+		// index nejnižšího prvku
 		int min_id = -1;
 
 		for (int i = 0; i < k; i++) {
@@ -37,6 +38,10 @@ int* merge(int** arrays, int* sizes, const int k)
 					min_id = i;
 				}
 			}
+		}
+
+		if (min_id < 0) {
+			break;
 		}
 
 		result[result_pointer] = arrays[min_id][ptrs[min_id]];
@@ -63,18 +68,18 @@ int* merge_va(const int k, ...)
 	va_start(args, k);
 
 	int** arrays = new int*[k];
-	int* lengths = new int[k];
+	int* sizes = new int[k];
 
 	for (int i = 0; i < k; i++) {
 		arrays[i] = va_arg(args, int*);
-		lengths[i] = va_arg(args, int);
+		sizes[i] = va_arg(args, int);
 	}
 	va_end(args);
 
-	int* result = merge(arrays, lengths, k);
+	int* result = merge(arrays, sizes, k);
 
 	delete[] arrays;
-	delete[] lengths;
+	delete[] sizes;
 	return result;
 }
 
